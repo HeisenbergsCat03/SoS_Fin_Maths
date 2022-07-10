@@ -1,0 +1,557 @@
+\documentclass{article}
+\usepackage{geometry,lipsum}
+\usepackage{amsmath,amsfonts,mathtools}
+\documentclass{report}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathabx}
+\geometry{margin=1.2in}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\title{Financial Mathematics\\
+Summer of Science 2022}
+\author{Yash Salunkhe \\
+210020156\\
+Mentor: Rajik Kumar}
+\date{13 May 2022}
+\pagebreak
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+\begin{flushleft}
+\textbf{
+\large \section{Introduction} }
+\bigskip
+\subsection{Simple and compound interest:}
+\normalsize
+
+
+\\
+Interest is the cost of borrowing money, where the borrower pays a fee to the lender for the loan. The interest, typically expressed as a percentage, can be either simple or compounded. Simple interest is based on the principal amount of a loan or deposit. In contrast, compound interest is based on the principal amount and the interest that accumulates on it in every period. \\    
+\bigskip
+
+To calculate simple interest: \[A=P(\frac{1+RT}{100})\]
+Where:\\
+
+A	=	final amount\\
+P	=	initial principal balance\\
+r	=	annual interest rate\\
+t	=	time (in years)\\
+\bigskip
+To calculate compound interest:
+
+\[A=P(1+\frac{r}{n})^{nt}\]
+Where:
+
+A	=	final amount\\
+P	=	initial principal balance\\
+r	=	interest rate\\
+n	=	number of times interest applied per time period\\
+t	=	number of time periods elapsed\\
+
+    
+\bigskip
+
+\bigskip
+\subsection{Power of compounding:}
+\normalsize
+
+\\
+The basic fundamental of compounding is that you are growing with a certain growth rate but the growth rate is established at a new base.\\
+
+For example if we start with 100 with a fixed growth rate of 10\%, at the end of the first year we get 110. In the next year, the base amount changes to 110 and 10\% growth will yield 121 and so on. Here is a table that summarizes this:
+\bigskip
+\begin{center}
+\begin{tabular}{||c c c c||} 
+ \hline
+ Year & Base amount & Total amount after compounding & Profit \\ [0.5ex] 
+ \hline\hline
+ 1 & 100 & 110 & 10 \\ 
+ \hline
+ 2 & 110 & 121 & 11 \\
+ \hline
+ 3 & 121 & 133.1 & 12.1 \\
+ \hline
+ 4 & 133.1 & 146.41 & 13.31 \\
+
+ \hline
+\end{tabular}
+\end{center}
+Effectively, 100 has grown to 146.41 given a 10\% CAGR(compound annual growth rate). However the real power of compounding can be visible over long periods of time like a few decades.\\
+\pagebreak
+If the table is shown decade wise, it looks like(In the decades column, 1 means the values after 1 decade):
+
+\bigskip
+
+\begin{center}
+\begin{tabular}{||c c c c||} 
+\hline
+Decades passed & Base amount & Total amount after compounding & Profit \\ [0.5ex] 
+ \hline\hline
+ 1 & 100 & 259.37 & 159.37 \\ 
+ \hline
+ 2 & 259.37 & 672.75 & 413.38 \\
+ \hline
+ 3 & 672.75 & 1,744.94 & 1102.19\\
+ \hline
+ \end{tabular}
+ \end{center}
+ 
+ Note that the profit after 3 decades is nearly \textbf{7} times the profit after 1 decade. After 30 years, 100 has become 1744.94 . \\
+ The number will increase if every month a certain amount is invested additional to the base 100. Even if 100 was invested every month for 30 years(including the base investment of 100), it will grow to 1,99,137.77 having invested 36,100 over this period.
+ 
+ \pagebreak
+ \large\section{Mathematical Functions}
+ \bigskip
+  \normalsize
+  \subsection{Progression and series:}
+  
+  \\ \bigskip
+  1) Arithmetic progression\\
+  An arithmetic progression or arithmetic sequence is a sequence of numbers such that the difference between the consecutive terms is constant.\\
+  Let \textit{a} be the first term and \textit{d} be the common difference between two consecutive terms.\\
+  Then the series would look like:
+  \[a, a+d, a+2d, a+3d...\]
+  The \textit{n}\textsuperscript{th} term of the series is given by:
+  \[a\textsubscript{n}=a+(n-1)d\]
+  The sum of n terms of the series is given by:
+  \[S\textsubscript{n}=\frac{n}{2}(a+a\textsubscript{n})\]
+  \bigskip
+  
+  2) Geometric Progression\\
+  A geometric progression is a sequence of non-zero numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number called the common ratio.\\
+  Let \textit{a} be the first term and \textit{r} be the common ratio. The series would look like:
+  \[a, ar,ar^2,ar^3...\]\\
+  The \textit{n}\textsuperscript{th} term would be:
+   \[a\textsubscript{n}=ar^{n-1}\]
+   The sum of n terms of the series is given by:
+  \[S\textsubscript{n}=a\frac{r^{n}-1}{r-1}\]
+  \bigskip
+  
+  3)Recursive progression\\
+   An arithmetic progression or arithmetic sequence is a sequence of numbers such that each term is the sum of the preceding two terms. Let \textit{a} be the first term.
+   The \textit{n}\textsuperscript{th} term would be:
+    \[a\textsubscript{n}= a\textsubscript{n-1}+a\textsubscript{n-2}\]
+    \bigskip
+    
+    
+    \subsection{Growth and decay curves}\\
+    
+    If there is a graphical representation of an exponential function of the form $$y=ab^x, a>0$$ the value of b determines whether it is a growth or decay curve.\\
+    For a \textbf{growth} curve: $$b>1$$\\
+    For a \textbf{decay} curve: $$0<b<1$$\\
+    \pagebreak
+    Growth and decay curves with natural logarithmic base(e=2.71)
+    :\\
+    {Growth curve}: \[ae^x\]\\
+    Decay curve:\[ae^{-x}\]
+    
+    \bigskip
+    
+    \subsection{Statistical measures}
+    \\
+    \bigskip
+    
+    Expected value of mean(E(x)):\\
+    For a random variable
+   \[
+        
+    
+    E(x)= \sum_{i=1}^{n} x\textsubscript{i} p(x\textsubscript{i}) = \mu
+    
+ \]
+ \bigskip
+ Variance(\sigma\textsuperscript{2}
+ ):
+ 
+ 
+ It is the squared deviation of the random variable
+ \[
+ \sigma\textsuperscript{2}=E[(x-\mu)\textsuperscript{2}] 
+ =\sum_{i=1}^{n} (x\textsubscript{i}-\mu)^2P(x\textsubscript{i}) = E(x^2)-(E(x))^2
+ \]
+\begin{center}
+  OR\\  
+\end{center} 
+\[
+\sigma^2=
+\sum_{i=1}^{n}\frac{(x\textsubscript{i}-\bar{x})^2}{n}
+
+\]
+\bigskip
+Sample Variance(S^2):
+
+\[
+S^2=
+\sum_{i=1}^{n}\frac{(x\textsubscript{i}-\bar{x})^2}{n-1}
+\]
+ \\
+ Standard deviation(\sigma):
+ 
+ 
+ Square root of variance is the standard deviation.
+ \bigskip
+\\
+Covariance(between x,y=Cov(x,y)):\\
+Covariance is a measure of the joint variability of two random variables.\\
+\[
+Cov(x,y)=E((x-\mu\textsubscript{x})(y-\mu\textsubscript{y))}
+
+ \]
+ 
+ \pagebreak
+ 
+ \section{Interest and Time Value of Money}
+ 
+ The interest rate is the price of loanable funds in financial markets. Economic gain from use of money is what gives money its time value. Hence, time value of money has to be considered for economic ventures.
+ Effect of time and interest rate must be given due consideration while dealing with monetary transactions.
+ \bigskip
+ 
+ \subsection{Time Value of Money}
+ Time Value of Money (TVM) is the idea that money that is available at the present time is worth more than the same amount in the future, due to its potential earning capacity. This core principle of finance holds that provided money can earn interest, any amount of money is worth more the sooner it is received. The value of money over time primarily depends on the interest rate and time passed.
+ \\
+ \\
+ 
+ 
+ 
+ 
+
+
+ Money can increase, or grow, over time if we can save (invest) it and earn a return on our savings 
+(investment). Let’s begin with a savings account illustration. Assume you have 1,000 to save, 
+or invest; this is your principal. The present value of a savings or an investment is its amount 
+or value today. \\
+For our example, this is your 1,000.
+A bank offers to accept your savings for one year and agrees to pay to you an 8 percent 
+interest rate for use of your 1,000. This amounts to 80 in interest (0.08 × 1,000). The total 
+payment by the bank at the end of one year is 1,080 (1,000 principal plus 80 in interest). \\
+This 1,080 is referred to as the future value, or value after one year in this case. The future 
+value of a savings amount or investment is its value at a specified time or date in the future.
+ 
+ \bigskip
+In general word terms, we have,
+\[
+Fv = Pv + (Pv * I)
+ \]
+ Where:\\
+
+Fv	=	Final Value\\
+Pv	=	Principal value\\
+I   =   Interest rate\\
+
+\bigskip
+\bigskip
+In the case of compounding, let’s assume that you leave the investment with a bank for more 
+than one year. For example, the fi rst bank accepts your 1,000 deposit now, adds 80 at the 
+end of one year, retains the 1,080 for the second year, and pays you interest at an 8 percent 
+rate. The bank returns your initial deposit plus accumulated interest at the end of the second 
+year
+\bigskip\\
+Future value = 1,000 × (1.08) × (1.08)\\
+= 1,000 × 1.1664\\
+ = 1,166.40\\
+= 1,166 (rounded)\\
+
+\bigskip
+\bigskip
+\large\textbf{Cash Flow over Time}
+ \bigskip
+ 
+ 
+ It is the actual inflow(receipts) and outflow(disbursements) at different points that occur over the life of an investment.\\
+ Net cash flow at any time t(F\textsubscript{t}) is the arithmetic sum of receipts(+) and disbursements(-) that occur at the same point of time
+ \\
+ \pagebreak
+ \subsection{Simple Discount, Focal dates and Equation of Value}
+ \bigskip
+ We can obtain current value from future value, interest rate and time. Concept of simple discount is used to bring back the future value back from its maturity date to the current time.\\
+ Use of simple discount can be for two types of debt: non-interest and interest bearing debt.
+ \\
+ 
+ We know
+\[ I= Cv*r*n\]\[
+Cv = \frac{i}{r*n}
+\] 
+
+and,
+\[ Fv= Cv+I\]
+thus,
+\[Fv=Cv(1+rn)\]
+
+\\ 
+So when Cv,Fv are known:
+\[rn=\frac{Fv}{Cv}-1\]
+\\
+
+Thus either r or n can be computed if the other is known.
+
+\\
+\bigskip
+\bigskip
+\large\textbf{Focal dates:}\\
+
+
+When there are multiple inflows and outflows, it is common to evaluate them all at a common date, often the date of the last payment.  In this case, the time of the final payment is used as a focal date, and all debts and payments are “moved” to the focal date, and their equivalent values calculated.
+\\
+\bigskip
+\large\textbf{Equation of Value:}
+Two or more amounts of money payable at different points in time, cannot be compared directly. We need all of them to be set in a common date. This is done by either accumulating or discounting. The resulting equation is known as \textbf{ equation of value.}
+Time diagrams are a really useful tool to visualise such problems.\\
+
+
+\bigskip
+\bigskip
+Example:\\
+Assume that we have two debts: 10,000 owed today and 15,000 owed one year from today. The company makes a payment of 8,000 six months from today and will make a final payment 1.5 years from today. The interest rate is 9 percent.\\
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=10cm]{focal date.png}
+    \caption{Timeline showing a series of payments:}
+\end{figure}
+
+If the company wishes to settle the outstanding debt at the 1 year 6 month point, all the dollar amounts are “moved” to the 1 year 6 month point (the date of the final payment) where they can be added and subtracted. 
+
+\pagebreak
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=10cm]{focal date2.png}
+    \caption{Timeline showing a series of payments:}
+\end{figure}
+
+
+To solve this, first calculate all FVs(equivalent values) with respect to t=0.
+
+\begin{equation}
+    FV\textsubscript{1}=10000(1+0.09*1.5)=11350
+\end{equation}
+\begin{equation}
+    FV\textsubscript{2}=8000(1+0.09*1)=8720
+\end{equation}
+\begin{equation}
+    FV\textsubscript{3}=15000(1+0.09*0.5)=15675
+\end{equation}
+where equations (1),(2) and (3) are the values of the first debt, first payment and second debt respectively.\\
+Finally, balancing the transaction at the focal date:
+\[ Final + 8720 = 11350 + 15675\]
+ 
+Therefore the final payment would be worth \textbf{18305}
+\\
+\bigskip
+Note that on the focal date, each debt will have accumulated interest charges.
+\bigskip
+\bigskip
+
+\pagebreak
+\subsection{Bank discount}
+ When a lender collects the interest due from the borrower at the time the loan amount is finalized, the interest paid is called \textbf{discount}. The lender is giving the borrower the rest of the loan money called the \textbf{proceeds}.\\
+ The rate at which interest is collected is called the \textbf{discount rate} and the term of the loan is called the \textbf{discount term}.\\
+ The interest rate is based on the current value and the discount rate is based on the future value.\\
+ 
+ \bigskip
+ \\
+ If a bank offers a loan of 1000(future value) at discount rate of 10\% , the bank will immediately deduct the discount(i.e 10\% of 1000) which is 100. The borrower gets the remaining proceeds which comes to 900 which would be the current value.\\
+ 
+ Then for interest I and discount D having rates r and d respectively, we can write:
+  \begin{equation}
+      I= CV * r * n
+  \end{equation}
+  \begin{equation}
+      D=FV * d * n
+  \end{equation}
+  Thus the proceeds can be written as
+  \begin{equation}
+      C = FV - D = FV(1-n*d)
+  \end{equation}
+  Making FV the subject of the equation,
+    \begin{equation}
+        FV=\frac{C}{1-nd}
+    \end{equation}
+     
+ \\
+ \bigskip
+ \large\textbf{Difference between Simple and Bank discount:}
+ 
+ Take a case where 5000 is lended for 6 months at discount rate of 9\% for both simple and bank discounts.\\
+ 
+ \bigskip
+ 
+ \textbf{For simple discount:}
+ \[CV=\frac{FV}{1+rn} = \frac{5000}{1+[0.09(\frac{6}{12})]}=4784.69
+ \]
+ Calculating discount,
+ \[D = FV - CV = 5000 - 4784.69 = 215.31\]
+ \\
+ \bigskip
+ \textbf{For bank discount:}
+ \[ D = FV * d * n = 5000* 0.09 * \frac{6}{12} = 225\]
+ 
+ \pagebreak
+ \subsection{Compound discount}
+ \bigskip
+ Compound interest involves 
+earning interest on interest in addition to interest on the principal or initial investment.\\
+In word terms for an interest rate of r\%, we have the following calculation:
+\[ FV = CV(1 + r)^n\]
+
+Making CV the subject of the equation,
+
+\[CV=FV(1+r)^{-n}\]
+ \bigskip
+ \textbf{Discount Factor}
+ 
+ Future value(FV) can be logically discounted to a current value by being multiplied by a certain factor
+ 
+ \[ DF = \frac{1}{(1+r)^n}
+\]
+ 
+ Finding the rate of compound interest:
+ \[ r = {(\frac{FV}{CV})^\frac{1}{n}} - 1\]
+ 
+ \bigskip
+ Finding the compounding term:
+ \[ n = \frac{ln (\frac{FV}{CV})}{ln (1 + r)}
+ 
+ \] 
+ 
+ \bigskip
+ 
+ \textbf{Rule of 72:}
+ The Rule of 72 can be used to approximate the time 
+required for an investment to double in value: divide the interest rate into the number 72.
+\\
+For example, if the interest rate is 8 percent, 72 divided by 8 indicates that the investment will 
+double in value in nine years.
+\bigskip
+\\
+Similarly for the investment to \textbf{triple}, one would divide 114 into r or 114/r. 
+ \pagebreak
+\section{Payment Series and Annuities}
+  
+ There are many types of cash flows(payment series):\\
+ 1)Single cash flow - The entire amount or debt is paid at once.
+ \\
+ 2)Equal(Uniform) cash flow- The amount or debt is repaid in equal installments at a monthly or yearly basis.\\
+ 3) Linear Gradient series- A gradient payment is a payment that increases by a regular amount.\\
+ 4) Geometric gradient series- A geometric gradient series is a cash flow series that either increases or decreases by a constant percentage each period. 
+ 5)Irregular series- A cash flow series where payments are not related to each other.
+ \bigskip
+\\
+\large\textbf{Single Payment Compound Amount Factor(SPCAF)}\\
+It is the factor when multiplied with present or current value, gives you the future value.
+\\
+For example, in the case of compound interest,
+\[FV = CV(1+r)^n\]
+Here the SPCAF is (1+r)^n.
+
+\bigskip
+\large\textbf{Single Payment Present Worth Factor(SPPWF)}
+\\
+This factor when multiplied with future amount gives you the present amount.
+\\
+
+For example in the case of compound interest, the SPPWF is (1+r)^{-n}.\\
+\bigskip
+\large\textbf{Equal Payment Series Compound Amount Factor}\\
+
+This factor when multiplied by equal annual amounts, gives future or compounded amount.
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=10cm]{equal payment series.png}
+    \caption{  Here A is the equal amount paid annually at i\% interest
+}
+\end{figure}\\
+\pagebreak
+To calculate this factor, let us tabulate the compounding effect.
+\\ 
+Here the third column depicts the future value of A after n years
+\begin{center}
+\begin{tabular}{||c c c||} 
+\hline
+Years passed & Base amount & Future Value after n years \\ [0.5ex] 
+ \hline\hline
+ 1 & A & A(1+i)^{n-1} \\ 
+ \hline
+ 2 & A & A(1+i)^{n-2}\\
+ \hline
+ 3 & A & A(1+i)^{n-3}\\
+ \hline
+ . & . & .\\
+ \hline
+ . & . & .\\
+ \hline
+ n-2 & A & A(1+i)^2\\
+ \hline
+ n-1 & A & A(1+i)^1\\
+ \hline 
+ n & A & A\\
+ \hline
+  & & \[ \sum = FV\]\\
+  
+ \hline
+ \end{tabular}
+ \end{center}
+ So according to the table, 
+ \[ FV= A + A(1+i) + A(1+i)^2...A(1+i)^{n-2} + A(1+i)^{n-1}
+\]
+which is a geometric series with first term A, common ratio 1+i and total terms n.\\
+Using the formula for the sum of a geometric series,
+
+\[ FV = A \frac{[(1+i)^n-1]}{i}\]
+\\
+\[
+Factor = \frac{[(1+i)^n-1]}{i} \]
+This factor is often denoted as (F/A, i, n)
+\\
+\bigskip
+\large\textbf{Equal Payment Series Capital Recovery Factor}
+
+This factor when multiplied with P will give the equal annual amount(A).
+
+\bigskip
+The factor is (A/P, i, n), i.e
+\[ P* (\frac{A}{P}, i, n) = A\]
+We know,
+\[ A = F \frac{i}{(i+1)^n-1}\] 
+\[F = P(1+i)^n\]
+\[ \therefore A = P \frac{i(1+i)^n}{(1+i)^n-1}
+\]
+The factor is A/P which is 
+\[\frac{i(1+i)^n}{(1+i)^n-1}\]
+
+
+ \pagebreak
+ \huge\textbf{Updated PoA}
+ 
+ \bigskip
+ \normalsize
+ I am lagging behind by 2 weeks compared to my original PoA. However I will be able to cover the remaining content in my post-endsem break.
+ 
+ \bigskip
+ \textbf{Week 5 (21\textsuperscript{th} to 26\textsuperscript{st} June):\\}
+\normalsize
+Economic, principles of equivalence, methods of comparision, payback period, capital recovery and return, project balance, analysis of credit and loans. (Videos 20-28)\\\bigskip
+\hrule
+\bigskip
+\large
+\textbf{Endsem week (27\textsuperscript{th} June to 3\textsuperscript{rd} July):\\}
+\bigskip
+\hrule
+\bigskip
+
+\textbf{Week 6 (4\textsuperscript{th} to 11\textsuperscript{th} July):\\}
+\normalsize
+Cost of credit and amortization, payment mortgage, sinking funds, types of depreciation and depletion, SOD UOD methods, break even analysis, economic order quantity, leverage, stocks, valuation(Videos 29-44)
+\bigskip
+
+\textbf{Week 7 (12\textsuperscript{th} to Submission day):\\}
+\normalsize
+Options, option valuation, cost of capital and ratio analysis, risk measurement, decision-making under risk, decision under uncertainty, portfolio return and risk,portfolio diversification, insurance and mortality table, pure endowment and life annuities, types of life insurances, reserve funds.(Videos 45-60)
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\end{flushleft}
+\end{document}
